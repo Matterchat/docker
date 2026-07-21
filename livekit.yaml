@@ -1,0 +1,14 @@
+port: 7880
+logging:
+  level: info
+  pion_level: error
+keys:
+  devkey: secretkey
+rtc:
+  tcp_port: 7881
+  udp_port: 7882
+  use_external_ip: false
+
+# Redis is optional for standalone deployment, but available if needed.
+# redis:
+#   address: redis:6379

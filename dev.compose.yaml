@@ -15,3 +15,16 @@ services:
     restart: on-failure
     ports:
       - "6379:6379"
+
+  livekit:
+    image: livekit/livekit-server:latest
+    container_name: matterchat-dev-livekit
+    restart: on-failure
+    ports:
+      - "7880:7880"
+      - "7881:7881/tcp"
+      - "7882:7882/udp"
+    volumes:
+      - ./livekit.yaml:/livekit.yaml
+    command: --config /livekit.yaml
+
